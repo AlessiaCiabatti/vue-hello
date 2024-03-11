@@ -19,6 +19,7 @@ createApp({
       contatore: 0,
       displayClock: '00:00:00',
       altraClasseCss: 'sottolineato',
+      secondoContatore: 0,
     }
   },
 
@@ -31,6 +32,12 @@ createApp({
     // per usare i data all'interno di methods, devo richiamarli con this
     this.contatore++;
     console.log('incremento contatore', this.contatore);
+  },
+
+  // secondo contatore
+  incrementoSecondoContatore(){
+    this.secondoContatore++;
+    console.log('incremento contatore', this.secondoContatore);
   },
   // saluto diventa una nuova stringa
   altroMessaggio(messaggioStr){

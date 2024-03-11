@@ -52,6 +52,9 @@
 
       <!-- orologio -->
       <h1 class="text-center ">{{ displayClock }}</h1>
+
+      <!-- contatore numeri pari -->
+      <button @click="incrementoSecondoContatore()" class="btn btn-primary">Secondo Contatore <span :class="secondoContatore % 2 === 0 ? 'coloreNumero' : '' ">{{ secondoContatore }}</span></button>
     </div>
   </div>
 
