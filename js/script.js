@@ -5,7 +5,10 @@ createApp({
 // metodo data() che restituisce un oggetto
   data(){
     return{
-      messaggio: ''
+      messaggio: '',
+      saluto: 'Buongiorno',
+      nome: 'Ugo',
+      cognome: 'De Ughi',
     }
   }
 
