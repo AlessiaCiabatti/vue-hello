@@ -9,6 +9,12 @@ createApp({
       saluto: 'Buongiorno',
       nome: 'Ugo',
       cognome: 'De Ughi',
+      // testo direttiva in HTML
+      testoHtml: '<p> Lorem ipsum dolor sit, amet consectetur adipisicing elit. Ad blanditiis qui deserunt earum laborum. Soluta, nobis molestiae. Distinctio repudiandae rerum, eius nesciunt obcaecati omnis fuga amet cupiditate similique eaque ducimus!</p>',
+      // classe
+      coloreTesto: '',
+      // link
+      linkSito: 'https://vuejs.org/',
     }
   }
 
