@@ -5,7 +5,7 @@ createApp({
 // metodo data() che restituisce un oggetto
   data(){
     return{
-      messaggio: 'Hello Vue'
+      messaggio: ''
     }
   }
 
