@@ -15,7 +15,24 @@ createApp({
       coloreTesto: '',
       // link
       linkSito: 'https://vuejs.org/',
+      // contaote 0
+      contatore: 0
     }
-  }
+  },
 
+  methods:{
+    prova(){
+      console.log('prova');
+    },
+
+  incrementoContatore(){
+    // per usare i data all'interno di methods, devo richiamarli con this
+    this.contatore++;
+    console.log('incremento contatore', this.contatore);
+  },
+  // saluto diventa una nuova stringa
+  altroMessaggio(messaggioStr){
+    this.saluto = `${messaggioStr} ${this.nome} come stai?`
+  }
+  }
 }).mount('#app')
