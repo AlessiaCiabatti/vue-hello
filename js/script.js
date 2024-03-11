@@ -18,6 +18,7 @@ createApp({
       // contaote 0
       contatore: 0,
       displayClock: '00:00:00',
+      altraClasseCss: 'sottolineato',
     }
   },
 
@@ -45,6 +46,7 @@ createApp({
   },
   // faccio funzionare l'orologio
   startClock(){
+    // la funzione di callback con un timing function, deve essere in un'arrow function
     setInterval(() => this.printClock(), 1000);
   }
   },

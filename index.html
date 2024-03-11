@@ -18,8 +18,11 @@
       <!-- input -->
       <input type="text" class="form-control" v-model="messaggio">
       <input type="text" class="form-control" v-model="coloreTesto">
+      <input type="text" class="form-control" v-model="altraClasseCss">
+      <!-- con una classe dinamica -->
       <h2 :class="coloreTesto">{{ messaggio }}</h2>
-      <h3>{{ messaggio }}</h3>
+      <!-- con due classi dinamiche le mettoin un array -->
+      <h3 :class="[altraClasseCss, coloreTesto]">{{ messaggio }}</h3>
       <h4>{{ messaggio }}</h4>
       <h5>{{ messaggio }}</h5>
       <h6>{{ messaggio }}</h6>

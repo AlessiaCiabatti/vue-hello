@@ -6,3 +6,15 @@
 .verde{
   color: green;
 }
+
+.sottolineato{
+  text-decoration: underline;
+}
+
+.corsivo{
+  font-style: italic;
+}
+
+.grassetto{
+  font-weight: bold;
+}
