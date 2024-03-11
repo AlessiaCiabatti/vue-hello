@@ -16,7 +16,8 @@ createApp({
       // link
       linkSito: 'https://vuejs.org/',
       // contaote 0
-      contatore: 0
+      contatore: 0,
+      displayClock: '00:00:00',
     }
   },
 
@@ -33,6 +34,33 @@ createApp({
   // saluto diventa una nuova stringa
   altroMessaggio(messaggioStr){
     this.saluto = `${messaggioStr} ${this.nome} come stai?`
+  },
+  // orologio: al caricaremnto segna l'ora
+  printClock(){
+    const d = new Date();
+    let h = d.getHours() < 10 ? '0' +  d.getHours() :  d.getHours()
+    let m = d.getMinutes() < 10 ? '0' +  d.getMinutes() :  d.getMinutes()
+    let s = d.getSeconds() < 10 ? '0' +  d.getSeconds() :  d.getSeconds()
+    this.displayClock = `${h}:${m}:${s}`
+  },
+  // faccio funzionare l'orologio
+  startClock(){
+    setInterval(() => this.printClock(), 1000);
   }
+  },
+
+
+  // dopo i metodi c'è mounted, che è un metodo, viene invocato quando l'app è  montata
+  mounted(){
+    console.log('APP MONTATA');
+    // per segnare l'ora la richiamo dentro mounted
+    this.printClock();
+    // richiamo anche questa funzione in mounted
+    this. startClock();
+  },
+
+  // anche se l'ho scritto dopo, viene stamato prima
+  created(){
+    console.log('APP CREATA');
   }
 }).mount('#app')
